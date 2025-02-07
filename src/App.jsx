@@ -6,7 +6,7 @@ import Home from './Home';
 const App = () => {
     return (
         <main className="main">
-            <Router>
+            <Router basename="/StalReact/">
                 <Routes>
                     <Route path="/" exact element={<Login />} />
                     <Route path="/Home" exact element={<Home />} />
