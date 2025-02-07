@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom'; // Импортируйте Link
 import './Header.css';
 import './Burger.css';
 import Logo from '../../assets/logo.png';
-import Burger from '../Burger/Burger'; // Импортируем компонент Burger
+import Burger from '../Burger/Burger'; 
 
 const Header = () => {
     const [isBurgerOpen, setIsBurgerOpen] = useState(false);
@@ -37,12 +38,11 @@ const Header = () => {
                             <a href="#" data-link="love" onClick={handleLinkClick}>О нас</a>
                         </li>
                         <li className="menu-item">
-                            <a href="#" data-link="account" onClick={handleLinkClick}>Личный кабинет</a>
+                            <Link to="/login">Личный кабинет</Link> {/* Используйте Link вместо обычной ссылки */}
                         </li>
                     </ul>
                 </nav>
                 <button className="burger_btn js-burger_btn" onClick={toggleBurger}></button>
-                {/* Вставляем компонент Burger */}
                 <Burger isOpen={isBurgerOpen} toggleBurger={toggleBurger} />
             </div>
         </header>

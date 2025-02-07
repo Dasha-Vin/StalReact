@@ -4,10 +4,10 @@ import MainContent from './components/MainContent/MainContent';
 import Programs from './components/Programs/Programs';
 import AboutUs from './components/AboutUs/AboutUs';
 
-const Home = () => {
+const Home = ({ onLoginClick }) => {
     return (
         <main className="main">
-            <div class="help" title="Помощь" id="helping">?</div>
+            <div className="help" title="Помощь" id="helping">?</div>
             <Header />
             <MainContent />
             <Programs />

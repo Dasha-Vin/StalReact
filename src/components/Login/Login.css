@@ -1,9 +1,11 @@
 .LoginContainer {
     display: flex;
-    justify-content: center; /* Центрирование по горизонтали */
-    align-items: center; /* Центрирование по вертикали */
-    height: 100vh; /* Высота на весь экран */
-    background-color: white; /* Белый фон */
+    flex-direction: column;
+    align-items: center; /* Центрируем элементы по горизонтали */
+    justify-content: center; /* Центрируем элементы по вертикали (если высота контейнера будет установлена) */
+    min-height: 100vh; /* Устанавливаем минимальную высоту на весь экран */
+    padding: 20px;
+    background-color: #f9f9f9; /* Цвет фона */
 }
 
 form {
@@ -44,7 +46,7 @@ form {
 }
 
 /* Дополнительные стили для кнопки и сообщения об ошибке */
-button {
+.Open {
     margin-top: 10px; /* Отступ сверху для кнопки */
     padding: 10px; /* Отступы внутри кнопки */
     border: none; /* Убираем стандартные границы у кнопки */
@@ -54,6 +56,19 @@ button {
     cursor: pointer; /* Указатель курсора при наведении */
 }
 
-button:hover {
+.Open:hover {
     background-color: #004494; /* Цвет фона кнопки при наведении */
+}
+
+.back-button-container {
+    margin-top: 20px; /* Отступ сверху для кнопки "Назад" */
+    width: 100%; /* Ширина кнопки "Назад" занимает 100% */
+    display: flex;
+    justify-content: center; /* Центрируем кнопку по горизонтали */
+}
+
+@media (max-width: 400px) {
+    form {
+        width: 100%;
+    }
 }

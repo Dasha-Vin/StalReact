@@ -1,19 +1,30 @@
-import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Login from './components/Login/Login';
+import React, { useState } from 'react';
+import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import Home from './Home';
+import Login from './components/Login/Login';
+import Profile from './components/Profile/Profile';
+import Programs from './components/Programs/Programs';
+import CourseDetails from './components/CourseDetails/CourseDetails';
+import Popup from './components/CourseDetails/Popup';
 
 const App = () => {
+    const [userId, setUserId] = useState(null); // Состояние для хранения userId
+
     return (
-        <main className="main">
-            <Router basename="/StalReact/">
-                <Routes>
-                    <Route path="/" exact element={<Login />} />
-                    <Route path="/Home" exact element={<Home />} />
-                </Routes>
-            </Router>
-        </main>
+        <Router basename="/StalReact/">
+            <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/login" element={<Login setUserId={setUserId} />} />
+                <Route path="/profile" element={userId ? <Profile userId={userId} /> : <Navigate to="/login" replace />} />
+                <Route path="*" element={<Navigate to="/" replace />} />
+                <Route path="/programs" element={<Programs />} />
+                <Route path="/courses/:id" element={<CourseDetails />} /> {/* Динамический маршрут для страниц курсов */}
+                <Route path="/popup" element={<Popup />} />
+            </Routes>
+        </Router>
     );
 }
 
 export default App;
+
+

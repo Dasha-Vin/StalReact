@@ -73,3 +73,9 @@
         font-size: 45px;
     }
 }
+
+@media (max-width: 310px) {
+    .main-title {
+        font-size: 35px;
+    }
+}

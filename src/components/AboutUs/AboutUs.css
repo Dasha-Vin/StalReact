@@ -24,13 +24,13 @@
 
 .galleries {
     display: flex;
-    gap: 20px;
+    gap: 10px;
 }
 
 .gallery {
     position: relative;
-    width: 590px;
-    height: 453px;
+    width: 595px;
+    height: 458px;
 }
 
 .gallery__slides {
@@ -83,6 +83,15 @@
 @media (max-width: 850px) {
     .galleries {
         flex-direction: column;
+    }
+
+    .gallery-item-title {
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+    
+    .gallery-item-text {
+        font-size: 17px;
     }
 
     .gallery {

@@ -1,12 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import { db } from '../../firebaseConfig'; // Импорт конфигурации Firebase
 import { collection, getDocs } from "firebase/firestore";
+import { useNavigate } from 'react-router-dom'; // Импортируем useNavigate
 import './Programs.css'; // Подключите ваши стили
 import line3Image from '../../assets/line3.png';
 
 const Programs = () => {
     const [services, setServices] = useState([]); // Хранение данных о курсах
     const [error, setError] = useState(''); // Хранение ошибок при получении данных
+    const navigate = useNavigate(); // Инициализируем navigate
 
     useEffect(() => {
         const fetchCourses = async () => {
@@ -16,7 +18,6 @@ const Programs = () => {
                 const courseList = courseSnapshot.docs.map(doc => ({
                     id: doc.id,
                     name: doc.data().name,
-                    url: "#" // Здесь можно добавить URL, если он есть в базе данных
                 }));
                 
                 setServices(courseList); // Установка полученных курсов в состояние
@@ -29,8 +30,8 @@ const Programs = () => {
         fetchCourses(); // Вызов функции для получения курсов
     }, []); // Пустой массив зависимостей для выполнения один раз при монтировании компонента
 
-    const handleServiceClick = (url) => {
-        window.location.href = url; // Перенаправление на URL ссылки
+    const handleServiceClick = (id) => {
+        navigate(`/courses/${id}`); // Перенаправление на страницу курса по его ID
     };
 
     return (
@@ -42,8 +43,8 @@ const Programs = () => {
                 <ul className="programms">
                     {services.map((service) => (
                         <li className="programm" key={service.id}>
-                            <div className="programm__text" onClick={() => handleServiceClick(service.url)}>
-                                <a href={service.url}>{service.name}</a>
+                            <div className="programm__text" onClick={() => handleServiceClick(service.id)}>
+                                <span>{service.name}</span> {/* Изменили <a> на <span> для предотвращения перехода по ссылке */}
                             </div>
                         </li>
                     ))}

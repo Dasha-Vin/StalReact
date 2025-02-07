@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './Burger.css'; // Добавьте стили если необходимо
 import closeIcon from '../../assets/close.png'; // Импортируйте изображение для закрытия
 
@@ -31,13 +32,12 @@ const Burger = ({ isOpen, toggleBurger }) => {
     };
 
     const handleLinkClick = (event) => {
-        const link = event.currentTarget.getAttribute("data-link");
-        const targetElement = document.getElementById(link);
-
+        event.preventDefault(); // Предотвратить переход по ссылке
+        const targetId = event.currentTarget.getAttribute("data-link");
+        const targetElement = document.getElementById(targetId);
+        
         if (targetElement) {
-            event.preventDefault(); // Отменяем стандартное поведение ссылки
             targetElement.scrollIntoView({ behavior: "smooth" });
-            toggleBurger(); // Закрываем бургер-меню после выбора
         }
     };
 
@@ -50,7 +50,7 @@ const Burger = ({ isOpen, toggleBurger }) => {
                 <nav className="burger-nav">
                     <ul className="burger-navList">
                         <li className="menu-item burger-navItem">
-                            <a data-link="account" onClick={handleLinkClick}>Личный кабинет</a>
+                            <Link to="/login">Личный кабинет</Link>
                         </li>
                         <li className="menu-item burger-navItem">
                             <a data-link="programm" onClick={handleLinkClick}>Программы</a>

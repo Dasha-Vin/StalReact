@@ -4,7 +4,7 @@ import { db } from '../../firebaseConfig'; // Импорт конфигурац�
 import { collection, getDocs, query, where } from "firebase/firestore";
 import './Login.css'; // Импорт стилей
 
-const Login = () => {
+const Login = ({ setUserId }) => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [error, setError] = useState('');
@@ -20,8 +20,9 @@ const Login = () => {
             const querySnapshot = await getDocs(q);
             
             if (!querySnapshot.empty) {
-                // Успешный вход
-                navigate('/Home'); // Перенаправление на главную страницу
+                const userDoc = querySnapshot.docs[0]; // Получаем первого пользователя из результата
+                setUserId(userDoc.id); // Сохраняем идентификатор пользователя
+                navigate('/profile'); // Перенаправление на страницу профиля
             } else {
                 setError('Неверные логин или пароль');
             }
@@ -57,9 +58,15 @@ const Login = () => {
                         required 
                     />
                 </div>
-                <button type="submit">Войти</button>
+                <button className='Open' type="submit">Войти</button>
                 {error && <p>{error}</p>}
             </form>
+
+            <div className="back-button-container">
+                <button onClick={() => navigate('/')} className="go-home-button">
+                    Назад
+                </button>
+            </div>
         </div>
     );
 };
