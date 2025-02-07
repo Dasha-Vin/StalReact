@@ -99,7 +99,6 @@
         display: block;
         width: 50px;
         position: absolute; /* Абсолютное позиционирование */
-        top: 40px;          /* Расстояние от верхнего края */
         right: 0;
         background: none;
         border: none;
