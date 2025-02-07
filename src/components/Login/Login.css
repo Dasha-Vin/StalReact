@@ -1,0 +1,59 @@
+.LoginContainer {
+    display: flex;
+    justify-content: center; /* Центрирование по горизонтали */
+    align-items: center; /* Центрирование по вертикали */
+    height: 100vh; /* Высота на весь экран */
+    background-color: white; /* Белый фон */
+}
+
+form {
+    background-color: orange; /* Оранжевая область под полями */
+    padding: 40px 20px; /* Отступы внутри формы */
+    border-radius: 8px; /* Закругление углов */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Тень для эффекта поднятия */
+    width: 300px; /* Ширина формы */
+    text-align: center; /* Выравнивание текста по центру */
+}
+
+.OpenLog {
+    margin-bottom: 20px; /* Отступ снизу для заголовка */
+    font-size: 24px; /* Размер шрифта заголовка */
+}
+
+/* Стили для полей ввода */
+.form_item {
+    margin-bottom: 15px; /* Отступ между полями */
+}
+
+.form__name {
+    width: 90%; /* Ширина поля ввода */
+    padding: 10px; /* Отступ внутри поля */
+    border: 1px solid #ccc; /* Граница вокруг поля */
+    border-radius: 5px; /* Закругление углов поля */
+    font-size: 16px; /* Размер шрифта */
+    background-color: orange; /* Оранжевый цвет фона поля ввода */
+    color: black; /* Цвет текста в поле ввода */
+    transition: border-color 0.3s ease; /* Плавный переход при изменении цвета границы */
+}
+
+/* Убираем изменения цвета при фокусировке */
+.form__name:focus {
+    outline: none; /* Убираем стандартное обрамление при фокусе */
+    border-color: #aaa; /* Изменяем цвет границы при фокусе (опционально) */
+    background-color: orange; /* Поддерживаем оранжевый фон при фокусировке */
+}
+
+/* Дополнительные стили для кнопки и сообщения об ошибке */
+button {
+    margin-top: 10px; /* Отступ сверху для кнопки */
+    padding: 10px; /* Отступы внутри кнопки */
+    border: none; /* Убираем стандартные границы у кнопки */
+    border-radius: 5px; /* Закругление углов кнопки */
+    background-color: #0056b3; /* Цвет фона кнопки */
+    color: white; /* Цвет текста кнопки */
+    cursor: pointer; /* Указатель курсора при наведении */
+}
+
+button:hover {
+    background-color: #004494; /* Цвет фона кнопки при наведении */
+}
