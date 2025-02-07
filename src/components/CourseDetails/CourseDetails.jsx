@@ -5,6 +5,7 @@ import { doc, getDoc } from 'firebase/firestore';
 import './CourseDetails.css'; 
 import Popup from './Popup'; 
 import CourseDetailsImage from '../../assets/CourseDetails.png';
+import line1Image from '../../assets/line1.png';
 
 const CourseDetails = () => {
     const { id } = useParams(); 
@@ -42,6 +43,7 @@ const CourseDetails = () => {
 
     return (
         <div className="course-details container">
+            <img src={line1Image} alt="line" className="line1" />
             <h1 className="common-title">{course.name}</h1>
             <img src={CourseDetailsImage} className='CourseDetailsImage' alt="Курс" />
             <p className="course-text">{course.text}</p>

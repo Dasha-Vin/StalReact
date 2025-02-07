@@ -84,7 +84,7 @@ body {
   left: calc(100% - 960px);
 }
 
-.line2 {
+.line3 {
   position: absolute;
   z-index: -1;
   top: -15px; /* или любое значение, которое вам нужно */

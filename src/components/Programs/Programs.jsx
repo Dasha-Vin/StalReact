@@ -37,7 +37,7 @@ const Programs = () => {
     return (
         <section className="main-programm" id="programm">
             <h2 className="common-title" id="programms">Программы переподготовки</h2>
-            <img src={line3Image} alt="line" className="line2" />
+            <img src={line3Image} alt="line" className="line3" />
             <div className="container">
                 {error && <p>{error}</p>} {/* Вывод ошибки, если она есть */}
                 <ul className="programms">
