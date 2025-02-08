@@ -84,6 +84,7 @@
 @media (max-width: 850px) {
     .galleries {
         flex-direction: column;
+        margin-bottom: 90px;
     }
 
     .gallery-item-title {

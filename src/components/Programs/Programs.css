@@ -44,6 +44,10 @@
 
 
 @media (max-width: 767px) {
+    .main-programm {
+        padding-bottom: 90px;
+    }
+
     .programms {
         flex-direction: column;
     }
