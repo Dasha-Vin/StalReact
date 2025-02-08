@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
+import {  HashRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import Home from './Home';
 import Login from './components/Login/Login';
 import Profile from './components/Profile/Profile';
@@ -11,7 +11,7 @@ const App = () => {
     const [userId, setUserId] = useState(null); // Состояние для хранения userId
 
     return (
-        <Router basename="/StalReact/">
+        <Router basename="./">
             <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/login" element={<Login setUserId={setUserId} />} />
@@ -26,5 +26,3 @@ const App = () => {
 }
 
 export default App;
-
-

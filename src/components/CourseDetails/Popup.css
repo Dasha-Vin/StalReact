@@ -122,12 +122,18 @@
     margin-bottom: 5px;
 }
 
+.success-message {
+    color: green;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
 @media (max-width: 767px) {
     .popup__content {
         padding-left: 16px;
         padding-right: 24px;
         width: 361px;
-        height: 611px;
+        height: 680px;
     }
     .popup__close-btn {
         width: 20px;

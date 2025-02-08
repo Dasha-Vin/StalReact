@@ -68,6 +68,7 @@ const Profile = ({ userId }) => {
                     <p><strong>Фамилия:</strong> {employee.lastName}</p>
                     <p><strong>Отчество:</strong> {employee.middleName}</p>
                     <p><strong>Курс:</strong> {employee.courseName}</p>
+                    <p><strong>Статус заявки:</strong> {employee.statusCourse}</p>
                     {courseDetails && (
                         <>
                             <p><strong>Дата начала:</strong> {courseDetails.startDate}</p> {/* Дата начала курса */}

@@ -3,6 +3,7 @@ import Header from './components/Header/Header';
 import MainContent from './components/MainContent/MainContent';
 import Programs from './components/Programs/Programs';
 import AboutUs from './components/AboutUs/AboutUs';
+import Contacts from './components/Contacts/Contacts';
 
 const Home = ({ onLoginClick }) => {
     return (
@@ -12,6 +13,7 @@ const Home = ({ onLoginClick }) => {
             <MainContent />
             <Programs />
             <AboutUs />
+            <Contacts />
         </main>
     );
 }
