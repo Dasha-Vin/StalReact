@@ -69,15 +69,32 @@
     border-bottom: 1px solid #5D3427;
     font-size: 25px;
     line-height: 34px;
-    margin-bottom: 50px;
-    background-color: rgb(238, 164, 95);
+    margin-top: 40px;
+    background-color: transparent;
 }
+
 .input:last-child {
     margin-bottom: 80px;
 }
 
 .input:focus {
     outline: none;
+}
+
+.checkbox-label {
+    display: flex; /* Используем flexbox для выравнивания */
+    align-items: center; /* Выравнивание по центру по вертикали */
+    font-size: 25px; /* Размер шрифта, как у инпутов */
+    color: #5D3427; /* Цвет текста */
+    margin-top: 30px; /* Отступ сверху */
+}
+
+.checkbox-input {
+    margin-right: 10px; /* Отступ справа от чекбокса */
+    width: 23px; /* Устанавливаем ширину чекбокса */
+    height: 23px; /* Устанавливаем высоту чекбокса */
+    accent-color: #5D3427; /* Задаем цвет галочки при поддержке */
+    vertical-align: sub;
 }
 
 .widthBtn {
@@ -126,6 +143,20 @@
     color: green;
     font-weight: bold;
     margin: 10px 0;
+}
+
+.password-container {
+    position: relative; /* Добавлено для абсолютного позиционирования кнопки */
+}
+
+.toggle-password {
+    top: 30%;
+    position: absolute; /* Абсолютное позиционирование для кнопки */
+    right: 15px; /* Сдвигаем кнопку от правого края */
+    background: none;
+    border: none;
+    font-size: 14px;
+    cursor: pointer;
 }
 
 @media (max-width: 767px) {

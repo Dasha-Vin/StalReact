@@ -50,11 +50,11 @@
 @media (min-width: 1200px) {
     .main-image {
         position: absolute;
-        top: 280px;
+        top: 250px;
         right: 0;
         z-index: -1;
-        width: 800px;
-        height: 450px;
+        width: 37%;
+        height: auto
     }
 }
 
@@ -62,7 +62,10 @@
     .main-content {
         margin: 0 auto;
         padding-top: 60px;
+        padding-left: 10px;
+        max-width: 960px;
     }
+
     .main-title {
         font-size: 65px;
     }
@@ -72,6 +75,7 @@
     .main-content {
         padding-bottom: 90px;
         padding-top: 50px;
+        padding-left: 0;
     }
 
     .main-title {

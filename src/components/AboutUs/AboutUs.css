@@ -20,6 +20,7 @@
     font-family: 'Steppe-Book', sans-serif;
     font-size: 18px;
     line-height: 130%;
+    font-weight: bold;
 }
 
 .galleries {
@@ -57,8 +58,8 @@
 }
 
 .gallery_box {
-    width: 590px;
-    height: 453px;
+    width: 595px;
+    height: 458px;
     background-position: 50%;
     background-size: cover;
 }
@@ -81,19 +82,25 @@
     background-image: url("../../assets/image_5.png");
 }
 
-@media (max-width: 850px) {
+@media (max-width: 1020px) {
+    .gallery-item-orange {
+        padding: 40px 55px 0 55px;
+    }
+}
+
+@media (max-width: 860px) {
     .galleries {
         flex-direction: column;
         margin-bottom: 90px;
     }
 
     .gallery-item-title {
-        font-size: 20px;
+        font-size: 27px;
         margin-bottom: 10px;
     }
     
     .gallery-item-text {
-        font-size: 17px;
+        font-size: 22px;
     }
 
     .gallery {
@@ -103,6 +110,21 @@
     .gallery_box {
         width: 100%;
     }
+    .gallery-item-orange {
+        padding: 60px 80px 0 80px;
+    }
+}
+
+@media (max-width: 586px) {
+    .gallery-item-title {
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+    
+    .gallery-item-text {
+        font-size: 17px;
+    }
+
     .gallery-item-orange {
         padding: 20px;
     }

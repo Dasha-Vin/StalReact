@@ -4,11 +4,12 @@ import MainContent from './components/MainContent/MainContent';
 import Programs from './components/Programs/Programs';
 import AboutUs from './components/AboutUs/AboutUs';
 import Contacts from './components/Contacts/Contacts';
+import ChatBot from './components/ChatBot/ChatBot';
 
 const Home = ({ onLoginClick }) => {
     return (
         <main className="main">
-            <div className="help" title="Помощь" id="helping">?</div>
+            <ChatBot />
             <Header />
             <MainContent />
             <Programs />
