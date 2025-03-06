@@ -35,10 +35,6 @@
 }
 
 @media (max-width: 767px) {
-    .common-title {
-        font-size: 30px;
-    }
-  
     .help {
         right: 25px;
         bottom: 50px;
