@@ -100,7 +100,7 @@
     }
     
     .gallery-item-text {
-        font-size: 22px;
+        font-size: 23px;
     }
 
     .gallery {
@@ -108,7 +108,7 @@
     }
 
     .gallery-item-orange {
-        padding: 60px 80px 0 80px;
+        padding: 80px;
     }
 }
 
