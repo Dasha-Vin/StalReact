@@ -38,7 +38,7 @@
     border-radius: 5px; /* Закругленные углы кнопки */
     cursor: pointer; /* Курсор при наведении */
     transition: background-color 0.3s; /* Плавный переход цвета фона */
-    font-size: 16px;
+    font-size: 19px;
 }
 
 .go-home-button:hover {

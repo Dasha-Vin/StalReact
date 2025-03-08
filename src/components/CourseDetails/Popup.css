@@ -118,13 +118,13 @@
     height: 100px;
     line-height: 100px;
     margin-top: 65px;
-    color: #5D3427;
+    color: white;
     border: 1px solid #5D3427;
     font-size: 30px;
     border-radius: 5px;
     text-decoration: none;
     text-align: center;
-    background-color: rgb(238, 164, 95);
+    background-color: #5D3427;
     cursor: pointer;
     margin-bottom: 20px;
 }

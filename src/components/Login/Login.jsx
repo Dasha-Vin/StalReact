@@ -67,13 +67,6 @@ const Login = ({ setUserId }) => {
                 <button className='Open' type="submit">Войти</button>
                 {error && <p>{error}</p>} {/* Отображение ошибки, если она есть */}
             </form>
-
-            {/* Кнопка возврата на главную страницу */}
-            <div className="back-button-container">
-                <button onClick={() => navigate('/')} className="go-home-button">
-                    Назад
-                </button>
-            </div>
         </div>
     );
 };
