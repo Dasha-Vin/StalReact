@@ -26,10 +26,10 @@
 }
 
 .header-title {
+    font-family: 'Steppe-ExtraBold', sans-serif;
     font-weight: 700;
     font-size: 16px;
     line-height: 130%;
-    
 }
 
 .logo {
@@ -44,7 +44,7 @@
     text-decoration: none;
     cursor: pointer;
     color: #5D3427;
-    font-weight: bold;
+    font-weight: 700;
 }
   
 .menu-item a:hover {

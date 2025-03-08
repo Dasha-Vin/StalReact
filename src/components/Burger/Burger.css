@@ -41,7 +41,7 @@
 }
 
 .burger-nav {
-    margin-top: 50px;
+    margin-top: 20px;
 }
 
 .burger-navList {
@@ -58,31 +58,6 @@
     text-decoration: none;
 }
 
-.burger-contacts {
-    margin-top: 90px;
-}
-
-.burger-contactsTitle {
-    font-size: 16px;
-    line-height: 22px;
-    color: black;
-    opacity: 0.5;
-}
-
-.burger-contactsPhone {
-    font-size: 20px;
-    line-height: 46px;
-    color: black;
-    text-decoration: none;
-}
-
-.burger-contactsLink {
-    font-size: 20px;
-    line-height: 25px;
-    color: black;
-    text-decoration: none;
-}
-
 .burger_close-btn {
     position: absolute;
     top: 20px;
@@ -92,18 +67,35 @@
     background: none;
     border: none;
 }
- 
+
+.burger-logo {
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.logo {
+    margin-right: 6px; 
+    width: 40px;
+    height: 40px;
+}
+
+.burger-title {
+    font-family: 'Steppe-ExtraBold', sans-serif;
+    font-weight: 700;
+    font-size: 22px;
+}
 
 @media (max-width: 1199px) {
     .burger_btn {
         display: block;
         width: 50px;
-        position: absolute; /* Абсолютное позиционирование */
+        position: absolute;
         right: 0;
         background: none;
         border: none;
-        font-size: 36px; /* Размер иконки */
-        color: black;     /* Цвет иконки */
+        font-size: 36px; 
+        color: black;    
         cursor: pointer;
     }
 

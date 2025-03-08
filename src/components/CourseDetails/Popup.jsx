@@ -105,7 +105,7 @@ const Popup = ({ isOpen, onClose, course }) => {
 
     return (
         <div className="popup popup_open">
-            <div className="popup__content js-popup__content">
+            <div className="popup__content">
                 <p className="popup__title">Записаться на курс</p>
                 <p className="popup__text">Заполните форму, мы рассмотрим вашу заявку</p>
 
@@ -185,7 +185,7 @@ const Popup = ({ isOpen, onClose, course }) => {
                     className="widthBtn_popup">
                         Отправить
                 </button>
-                <div className="js-popup__close-btn" onClick={onClose}>
+                <div className="popup__close-btn" onClick={onClose}>
                     <img src={CloseImage} className='popup__close-btn' alt="Закрыть" />
                 </div>
             </div>

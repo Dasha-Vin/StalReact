@@ -1,69 +1,61 @@
 .LoginContainer {
     display: flex;
     flex-direction: column;
-    align-items: center; /* Центрируем элементы по горизонтали */
-    justify-content: center; /* Центрируем элементы по вертикали (если высота контейнера будет установлена) */
+    align-items: center;
+    justify-content: center; 
     min-height: 100vh; /* Устанавливаем минимальную высоту на весь экран */
-    background-color: #f9f9f9; /* Цвет фона */
+    background-color: #f9f9f9; 
 }
 
 form {
-    background-color: #ffa500d6; /* Оранжевая область под полями */
-    padding: 40px 20px; /* Отступы внутри формы */
-    border-radius: 8px; /* Закругление углов */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7); /* Тень для эффекта поднятия */
-    width: 300px; /* Ширина формы */
-    text-align: center; /* Выравнивание текста по центру */
+    background-color: #ffa500d6; 
+    padding: 40px 20px;
+    border-radius: 8px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8); /* Тень для эффекта поднятия */
+    width: 300px; 
+    text-align: center;
 }
 
 .OpenLog {
-    margin-bottom: 20px; /* Отступ снизу для заголовка */
-    font-size: 27px; /* Размер шрифта заголовка */
+    margin-bottom: 20px; 
+    font-size: 27px;
     font-weight: 700;
 }
 
-/* Стили для полей ввода */
 .form_item {
-    margin-bottom: 15px; /* Отступ между полями */
+    margin-bottom: 15px; 
 }
 
 .form__name {
-    width: 90%; /* Ширина поля ввода */
-    padding: 10px; /* Отступ внутри поля */
-    border: 1px solid #ccc; /* Граница вокруг поля */
-    border-radius: 5px; /* Закругление углов поля */
-    font-size: 20px; /* Размер шрифта */
-    background-color: orange; /* Оранжевый цвет фона поля ввода */
-    color: black; /* Цвет текста в поле ввода */
-    transition: border-color 0.3s ease; /* Плавный переход при изменении цвета границы */
+    width: 90%;
+    padding: 10px; 
+    border: 1px solid #ccc;
+    border-radius: 5px; 
+    font-size: 20px; 
+    background-color: orange;
+    color: black; 
+    transition: border-color 0.3s ease; 
 }
 
 .form__name:focus {
-    outline: none; /* Убираем стандартное обрамление при фокусе */
-    border-color: #aaa; /* Изменяем цвет границы при фокусе (опционально) */
-    background-color: orange; /* Поддерживаем оранжевый фон при фокусировке */
+    outline: none;
+    border-color: #aaa; 
+    background-color: orange;
 }
 
 .Open {
-    margin-top: 13px; /* Отступ сверху для кнопки */
-    padding: 10px 15px; /* Отступы внутри кнопки */
-    border: none; /* Убираем стандартные границы у кнопки */
-    border-radius: 5px; /* Закругление углов кнопки */
-    background-color: #0056b3; /* Цвет фона кнопки */
-    color: white; /* Цвет текста кнопки */
-    cursor: pointer; /* Указатель курсора при наведении */
+    margin-top: 13px;
+    padding: 10px 15px; 
+    border: none; 
+    border-radius: 5px;
+    background-color: #0056b3; 
+    color: white;
+    cursor: pointer;
     font-size: 17px;
 }
 
 .Open:hover {
-    background-color: #004494; /* Цвет фона кнопки при наведении */
-}
-
-.back-button-container {
-    margin-top: 20px; /* Отступ сверху для кнопки "Назад" */
-    width: 100%; /* Ширина кнопки "Назад" занимает 100% */
-    display: flex;
-    justify-content: center; /* Центрируем кнопку по горизонтали */
+    background-color: #004494; 
 }
 
 @media (max-width: 400px) {

@@ -42,7 +42,7 @@ const Header = () => {
                         </li>
                     </ul>
                 </nav>
-                <button className="burger_btn js-burger_btn" onClick={toggleBurger}></button>
+                <button className="burger_btn" onClick={toggleBurger}></button>
                 <Burger isOpen={isBurgerOpen} toggleBurger={toggleBurger} />
             </div>
         </header>
