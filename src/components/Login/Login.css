@@ -5,6 +5,7 @@
     justify-content: center; 
     min-height: 100vh; /* Устанавливаем минимальную высоту на весь экран */
     background-color: #f9f9f9; 
+    padding: 10px;
 }
 
 form {
@@ -12,26 +13,28 @@ form {
     padding: 40px 20px;
     border-radius: 8px; 
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8); /* Тень для эффекта поднятия */
-    width: 300px; 
+    width: 400px; 
+    height: 350px;
     text-align: center;
 }
 
 .OpenLog {
+    font-family: 'Steppe-ExtraBold', sans-serif;
     margin-bottom: 20px; 
-    font-size: 27px;
+    font-size: 30px;
     font-weight: 700;
 }
 
 .form_item {
-    margin-bottom: 15px; 
+    margin-bottom: 25px; 
 }
 
 .form__name {
     width: 90%;
     padding: 10px; 
-    border: 1px solid #ccc;
+    border: 2px solid #ccc;
     border-radius: 5px; 
-    font-size: 20px; 
+    font-size: 22px; 
     background-color: orange;
     color: black; 
     transition: border-color 0.3s ease; 
@@ -44,18 +47,15 @@ form {
 }
 
 .Open {
-    margin-top: 13px;
+    font-family: 'Steppe-Book', sans-serif;
+    margin-top: 20px;
     padding: 10px 15px; 
     border: none; 
     border-radius: 5px;
     background-color: #0056b3; 
     color: white;
     cursor: pointer;
-    font-size: 17px;
-}
-
-.Open:hover {
-    background-color: #004494; 
+    font-size: 20px;
 }
 
 @media (max-width: 400px) {

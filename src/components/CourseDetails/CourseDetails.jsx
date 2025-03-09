@@ -75,7 +75,7 @@ const CourseDetails = () => {
                 <p className="course-text">{course.text}</p>
 
                 {/* Кнопка для регистрации на курс */}
-                <button className="js-btn widthBtn widthBtn_inverted" onClick={togglePopup}>
+                <button className="widthBtn widthBtn_inverted" onClick={togglePopup}>
                     Зарегистрироваться на курс
                 </button>
 
