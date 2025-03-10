@@ -25,8 +25,8 @@ const ContactSection = () => {
             <h2 className='contact'>Свяжитесь с нами</h2>
             
             <div className="contacts__block">
-            <a className="contacts-phone" href="tel:+7 935  895-45-35">+7 935  895-45-35</a>  
-            <a className="contacts-mail" href="mailto:hello@mail.com">hello@mail.com</a>
+            <a className="contacts-phone" href="tel:+7 (3537) 66 21 53">+7 (3537) 66 21 53</a>  
+            <a className="contacts-mail" href="mailto:info@uralsteel.com">info@uralsteel.com</a>
             </div>
         </div>
     );
