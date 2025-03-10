@@ -1,32 +1,35 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { db } from '../../firebaseConfig'; // Импорт конфигурации Firebase
+import { collection, getDocs, query, where } from "firebase/firestore";
 import './Login.css'; // Импорт стилей
 import Back from '../../assets/back.png';
 
 const Login = ({ setUserId }) => {
-    const [email, setEmail] = useState('');  // Состояние для хранения email
-    const [password, setPassword] = useState('');  // Состояние для хранения пароля
-    const [error, setError] = useState('');  // Состояние для хранения ошибки
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+    const [error, setError] = useState('');
 
-    const navigate = useNavigate();  // Хук для навигации
+    const navigate = useNavigate();
 
-    const handleEmail = (e) => {
-        e.preventDefault();  // Предотвращаем перезагрузку страницы при отправке формы
+    const handleEmail = async (e) => {
+        e.preventDefault();
         
-        // Симулированные данные пользователей
-        const simulatedUsers = [
-            { id: '1', email: 'user@example.com', password: 'password123' },
-            { id: '2', email: 'admin@example.com', password: 'admin123' }
-        ];
-
-        // Проверяем, соответствует ли введенный email и пароль одному из симулированных пользователей
-        const user = simulatedUsers.find(user => user.email === email && user.password === password);
-
-        if (user) {
-            setUserId(user.id); // Сохраняем идентификатор пользователя
-            navigate('/profile'); // Перенаправление на страницу профиля
-        } else {
-            setError('Неверные почта или пароль'); // Устанавливаем сообщение об ошибке
+        try {
+            const employeesRef = collection(db, "employees");
+            const q = query(employeesRef, where("login", "==", email), where("password", "==", password));
+            const querySnapshot = await getDocs(q);
+            
+            if (!querySnapshot.empty) {
+                const userDoc = querySnapshot.docs[0]; // Получаем первого пользователя из результата
+                setUserId(userDoc.id); // Сохраняем идентификатор пользователя
+                navigate('/profile'); // Перенаправление на страницу профиля
+            } else {
+                setError('Неверные логин или пароль');
+            }
+        } catch (err) {
+            console.error("Ошибка при входе: ", err);
+            setError('Произошла ошибка');
         }
     };
 
