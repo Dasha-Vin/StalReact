@@ -56,6 +56,19 @@ body {
   left: -120px;
 }
 
+.Arrow-back {
+  display: flex; /* Используем flexbox для горизонтального выравнивания */
+  align-items: center; /* Центрируем по вертикали */
+  cursor: pointer; /* Указываем, что элемент кликабельный */
+  padding: 7px 6px;
+}
+
+.backImage {
+  margin-right: 2px; /* Отступ справа от изображения */
+  width: 30px;
+  height: 30px;
+}
+
 @media (max-width: 767px) {
   .common-title {
       font-size: 45px;
