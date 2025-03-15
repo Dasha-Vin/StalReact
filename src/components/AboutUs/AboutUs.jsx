@@ -49,6 +49,7 @@ const AboutUs = () => {
                                         transform: activeId === index ? 'translateX(0)' : 'translateX(-100%)',
                                         opacity: activeId === index ? '1' : '0'
                                     }}
+                                    data-testid={`slide-${index}`} // Добавляем data-testid
                                 >
                                     <div className={`gallery_box ${slide.className}`}></div>
                                 </div>

@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom'; // Импортируйте Link
 import './Header.css';
-import './Burger.css';
 import Logo from '../../assets/logo.png';
 import Burger from '../Burger/Burger'; 
 

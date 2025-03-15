@@ -25,9 +25,9 @@ const Burger = ({ isOpen, toggleBurger }) => {
 
     const handleClickOutside = (event) => {
         const burgerContentNode = event.currentTarget.querySelector('.js-burger_content');
-        const isClickOutsideContent = !event.composedPath().includes(burgerContentNode);
-
-        if (isClickOutsideContent) {
+    
+        // Проверяем, был ли клик вне содержимого бургер-меню
+        if (burgerContentNode && !burgerContentNode.contains(event.target)) {
             toggleBurger();
         }
     };
